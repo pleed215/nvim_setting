@@ -1,0 +1,11 @@
+require("pleed0215.plugins-setup")
+require("pleed0215.core.options")
+require("pleed0215.core.keymaps")
+require("pleed0215.core.colorscheme")
+
+require("pleed0215.plugins.comment")
+require("pleed0215.plugins.nvim-tree")
+require("pleed0215.plugins.lualine")
+require("pleed0215.plugins.telescope")
+require("pleed0215.plugins.nvim-cmp")
+require("pleed0215.plugins.lsp.mason")
