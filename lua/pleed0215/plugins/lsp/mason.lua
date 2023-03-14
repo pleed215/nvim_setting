@@ -8,6 +8,14 @@ if not mason_lspconfig_status then
     return
 end
 
+
+local mason_null_ls_status, mason_null_ls = pcall(require, "mason-null-ls")
+if not mason_null_ls_status then
+    return
+end
+
+
+
 mason.setup()
 
 -- https://github.com/williamboman/mason-lspconfig.nvim
@@ -18,6 +26,19 @@ mason_lspconfig.setup({
         "html",
         "cssls",
         "tailwindcss",
-        "sumneko_lua",
+        "lua_ls",
+        "marksman",
+        "rust_analyzer",
+    },
+})
+
+
+
+-- https://github.com/jay-babu/mason-null-ls.nvim
+mason_null_ls.setup({
+    ensure_installed = {
+        "prettier",
+        "stylua",
+        "eslinst_d",
     }
 })
