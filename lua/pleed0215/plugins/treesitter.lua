@@ -9,6 +9,7 @@ treesitter.setup({
 	-- enable syntax highlighting
 	highlight = {
 		enable = true,
+		additional_vim_regex_highlighting = false,
 	},
 	-- enable indentation
 	indent = { enable = true },
@@ -16,6 +17,9 @@ treesitter.setup({
 	autotag = { enable = true },
 	-- ensure these language parsers are installed
 	ensure_installed = {
+		"c",
+		"help",
+		"dart",
 		"json",
 		"javascript",
 		"typescript",
@@ -36,4 +40,5 @@ treesitter.setup({
 	},
 	-- auto install above language parsers
 	auto_install = true,
+	sync_install = false,
 })
